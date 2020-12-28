@@ -43,7 +43,8 @@ class PlaceFragment: Fragment() {
             if (toString.isNotEmpty()) {
                 viewModel.searchPlaces(toString)
             } else {
-
+                viewModel.placeList.clear()
+                adapter.notifyDataSetChanged()
             }
         }
 

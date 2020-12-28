@@ -8,7 +8,7 @@ class WeatherApplication: Application() {
     companion object {
         lateinit var context: Context
 
-        const val TOKEN = ""
+        const val TOKEN = "auv03EiB3Zt9RZcn"
     }
 
     override fun onCreate() {
