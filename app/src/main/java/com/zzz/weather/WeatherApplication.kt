@@ -14,5 +14,7 @@ class WeatherApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         context = applicationContext
+
+        DataStoreUtils.init(this)
     }
 }
