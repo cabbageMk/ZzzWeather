@@ -19,7 +19,7 @@ import com.zzz.weather.R
 import com.zzz.weather.logic.model.Place
 import com.zzz.weather.ui.weather.WeatherActivity
 
-class PlaceFragment: Fragment() {
+class PlaceFragment : Fragment() {
     private lateinit var root: View
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: PlaceAdapter
@@ -54,6 +54,9 @@ class PlaceFragment: Fragment() {
         recyclerView = root.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
         adapter = PlaceAdapter(this, viewModel.placeList)
+        recyclerView.setHasFixedSize(
+            true
+        )
         recyclerView.adapter = adapter
 
         searchPlaceEdit = root.findViewById(R.id.searchPlaceEdit)

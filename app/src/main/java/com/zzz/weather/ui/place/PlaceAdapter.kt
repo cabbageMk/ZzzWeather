@@ -55,4 +55,9 @@ class PlaceAdapter(private val fragment: Fragment, private val placeList: List<P
     }
 
     override fun getItemCount() = placeList.size
+
+    override fun onViewRecycled(holder: ViewHolder) {
+        super.onViewRecycled(holder)
+
+    }
 }
